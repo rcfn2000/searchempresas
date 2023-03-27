@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Busca Empresas no Google Maps</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <h1>Busca Empresas no Google Maps</h1>
+    <form method="POST" action="{{ url_for('search') }}">
+      <label for="location">Localização:</label>
+      <input type="text" name="location" id="location" required>
+      <label for="radius">Raio (em metros):</label>
+      <input type="number" name="radius" id="radius" min="1" max="100000" required>
+      <label for="keyword">Palavra-chave:</label>
+      <input type="text" name="keyword" id="keyword" required>
+      <button type="submit">Buscar</button>
+    </form>
+  </body>
+</html>

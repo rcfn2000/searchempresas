@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Resultados da Pesquisa</title>
+</head>
+<body>
+    <h1>Resultados da Pesquisa</h1>
+    <ul>
+        {% for business in businesses %}
+        <li>
+            <h2>{{ business['name'] }}</h2>
+            <p>Endereço: {{ business['address'] }}</p>
+            <p>Classificação: {{ business['rating'] or 'N/A' }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
