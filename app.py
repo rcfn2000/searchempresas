@@ -19,7 +19,8 @@ def search():
         'query': keyword,
         'location': location,
         'radius': radius,
-        'key': API_KEY
+        'key': API_KEY,
+        'region': 'br'
     }
     response = requests.get(url, params=params)
     results = response.json()['results']
